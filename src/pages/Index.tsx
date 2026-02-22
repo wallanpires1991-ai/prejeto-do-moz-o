@@ -1,6 +1,7 @@
 import { CheckCircle, AlertTriangle, BookOpen, Shield, Star, Lock, Zap, FileText } from "lucide-react";
 import CountdownTimer from "@/components/CountdownTimer";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import heroWoman from "@/assets/hero-woman.png";
 
 const CTA_LINK = "#";
 
@@ -20,6 +21,7 @@ const Index = () => {
       <header className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
         <div className="container max-w-4xl mx-auto px-4 py-16 sm:py-24 relative z-10 text-center">
+          <img src={heroWoman} alt="Especialista em rescisão trabalhista" className="mx-auto mb-8 max-w-xs sm:max-w-sm md:max-w-md rounded-xl" />
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-foreground mb-6">
             Pare de perder dinheiro na sua{" "}
             <span className="text-primary">rescisão trabalhista!</span>
