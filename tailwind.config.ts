@@ -47,6 +47,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        urgency: {
+          DEFAULT: "hsl(var(--urgency))",
+          foreground: "hsl(var(--urgency-foreground))",
+        },
+        warm: "hsl(var(--warm-bg))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
