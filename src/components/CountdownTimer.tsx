@@ -12,31 +12,24 @@ const CountdownTimer = () => {
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
 
-  const TimeBlock = ({ value, label }: { value: string; label: string }) => (
-    <div className="flex flex-col items-center">
-      <span className="bg-urgency text-urgency-foreground text-3xl sm:text-5xl font-bold rounded-lg px-4 py-3 min-w-[70px] sm:min-w-[90px] text-center tabular-nums shadow-lg">
-        {value}
-      </span>
-      <span className="text-xs sm:text-sm text-muted-foreground mt-2 uppercase tracking-wider">{label}</span>
-    </div>
-  );
-
   return (
-    <section className="py-12 sm:py-16 bg-warm">
-      <div className="container max-w-3xl mx-auto px-4 text-center">
-        <p className="text-urgency font-bold text-lg sm:text-xl mb-6">
-          ⚠️ Oferta especial termina em:
-        </p>
-        <div className="flex justify-center gap-4 sm:gap-6 mb-6">
-          <TimeBlock value={String(minutes).padStart(2, "0")} label="Minutos" />
-          <span className="text-urgency text-4xl sm:text-5xl font-bold self-start pt-3">:</span>
-          <TimeBlock value={String(seconds).padStart(2, "0")} label="Segundos" />
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-urgency text-urgency-foreground shadow-2xl">
+      <div className="container max-w-4xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
+        <span className="font-bold text-sm sm:text-base">⚠️ Oferta especial termina em:</span>
+        <div className="flex items-center gap-2">
+          <span className="bg-black/20 rounded px-3 py-1 font-bold text-xl sm:text-2xl tabular-nums min-w-[50px] text-center">
+            {String(minutes).padStart(2, "0")}
+          </span>
+          <span className="font-bold text-xl">:</span>
+          <span className="bg-black/20 rounded px-3 py-1 font-bold text-xl sm:text-2xl tabular-nums min-w-[50px] text-center">
+            {String(seconds).padStart(2, "0")}
+          </span>
         </div>
-        <p className="text-muted-foreground text-sm sm:text-base max-w-md mx-auto">
-          Não deixe para depois. Cada minuto pode estar custando dinheiro do seu bolso.
-        </p>
+        <span className="text-xs sm:text-sm opacity-90 hidden md:inline">
+          Cada minuto pode estar custando dinheiro do seu bolso.
+        </span>
       </div>
-    </section>
+    </div>
   );
 };
 

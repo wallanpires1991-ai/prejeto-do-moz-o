@@ -1,7 +1,8 @@
-import { CheckCircle, AlertTriangle, BookOpen, Shield, Star, Lock, Zap, FileText } from "lucide-react";
+import { CheckCircle, AlertTriangle, BookOpen, Star, Lock, Zap, FileText } from "lucide-react";
 import CountdownTimer from "@/components/CountdownTimer";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import heroWoman from "@/assets/hero-woman.png";
+import garantiaSelo from "@/assets/garantia-7-dias.png";
 
 const CTA_LINK = "#";
 
@@ -16,12 +17,12 @@ const CTAButton = ({ children }: { children: React.ReactNode }) => (
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-16">
       {/* Hero */}
       <header className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
         <div className="container max-w-4xl mx-auto px-4 py-16 sm:py-24 relative z-10 text-center">
-          <img src={heroWoman} alt="Especialista em rescisão trabalhista" className="mx-auto mb-8 max-w-xs sm:max-w-sm md:max-w-md rounded-xl" />
+          <img src={heroWoman} alt="Especialista em rescisão trabalhista" className="mx-auto mb-8 max-w-sm sm:max-w-md md:max-w-lg rounded-xl" />
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-foreground mb-6">
             Pare de perder dinheiro na sua{" "}
             <span className="text-primary">rescisão trabalhista!</span>
@@ -46,7 +47,7 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Countdown */}
+      {/* Sticky Countdown */}
       <CountdownTimer />
 
       {/* Pain Section */}
@@ -135,7 +136,7 @@ const Index = () => {
       {/* Guarantee */}
       <section className="py-14 sm:py-20 bg-warm">
         <div className="container max-w-2xl mx-auto px-4 text-center">
-          <Shield className="w-16 h-16 text-primary mx-auto mb-6" />
+          <img src={garantiaSelo} alt="Garantia de 7 dias" className="mx-auto mb-6 w-36 sm:w-44" />
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
             Garantia incondicional de 7 dias
           </h2>
