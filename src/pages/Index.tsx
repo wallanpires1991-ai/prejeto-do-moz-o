@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import heroWoman from "@/assets/hero-woman.png";
 import garantiaSelo from "@/assets/garantia-7-dias.png";
 
-const CTA_LINK = "#";
+const CTA_LINK = "https://pay.kiwify.com.br/RqplLuC";
 
 const CTAButton = ({ children }: { children: React.ReactNode }) => (
   <a
