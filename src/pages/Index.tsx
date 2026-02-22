@@ -108,7 +108,7 @@ const Index = () => {
       {/* Pain Section */}
       <section className="py-14 sm:py-20">
         <div className="container max-w-3xl mx-auto px-4 text-center">
-          <AlertTriangle className="w-12 h-12 text-urgency mx-auto mb-6" />
+          <AlertTriangle className="w-20 h-20 text-urgency mx-auto mb-6" />
           <h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-6">
             Você sabe se estão te pagando tudo o que é seu por direito?
           </h2>
