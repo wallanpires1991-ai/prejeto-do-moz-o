@@ -3,6 +3,8 @@ import CountdownTimer from "@/components/CountdownTimer";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import heroWoman from "@/assets/hero-woman.png";
 import garantiaSelo from "@/assets/garantia-7-dias.png";
+import bonusMensagens from "@/assets/bonus-kit-mensagens.png";
+import bonusDocumentos from "@/assets/bonus-lista-documentos.png";
 
 const CTA_LINK = "https://pay.kiwify.com.br/RqplLuC";
 
@@ -43,6 +45,59 @@ const Index = () => {
                 <span>{text}</span>
               </div>
             ))}
+          </div>
+
+          {/* Bônus Exclusivos */}
+          <div className="mt-12 max-w-3xl mx-auto">
+            <div className="relative mb-6">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-primary/30" />
+              </div>
+              <div className="relative flex justify-center">
+                <span className="bg-background px-4 text-primary font-extrabold text-lg sm:text-2xl uppercase tracking-wide">
+                  🎁 Bônus GRÁTIS por tempo limitado
+                </span>
+              </div>
+            </div>
+            <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl mx-auto">
+              Comprando HOJE você leva esses <strong className="text-foreground">2 bônus exclusivos</strong> sem pagar nada a mais!
+            </p>
+            <div className="grid sm:grid-cols-2 gap-6">
+              {[
+                {
+                  img: bonusMensagens,
+                  title: "Kit Mensagens Prontas para o RH",
+                  desc: "Modelos prontos para você se comunicar com o RH da empresa de forma profissional e assertiva.",
+                  value: "R$ 47,00",
+                },
+                {
+                  img: bonusDocumentos,
+                  title: "Lista de Documentos Importantes",
+                  desc: "Checklist completo com todos os documentos que você precisa reunir para garantir seus direitos.",
+                  value: "R$ 37,00",
+                },
+              ].map((bonus) => (
+                <div
+                  key={bonus.title}
+                  className="relative bg-card rounded-2xl border-2 border-primary/40 shadow-lg overflow-hidden group hover:border-primary hover:shadow-xl transition-all"
+                >
+                  <div className="absolute top-3 right-3 bg-primary text-primary-foreground text-[10px] sm:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider z-10">
+                    Grátis
+                  </div>
+                  <div className="p-4 flex justify-center bg-gradient-to-b from-primary/5 to-transparent">
+                    <img src={bonus.img} alt={bonus.title} className="w-48 sm:w-56 object-contain drop-shadow-md" />
+                  </div>
+                  <div className="p-5 text-center">
+                    <h3 className="font-bold text-foreground text-base sm:text-lg mb-2">{bonus.title}</h3>
+                    <p className="text-muted-foreground text-sm mb-3 leading-relaxed">{bonus.desc}</p>
+                    <p className="text-sm">
+                      <span className="line-through text-muted-foreground/60">{bonus.value}</span>{" "}
+                      <span className="text-primary font-extrabold text-lg">GRÁTIS</span>
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </header>
