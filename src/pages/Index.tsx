@@ -212,7 +212,7 @@ const Index = () => {
             {[
               { icon: Lock, text: "Compra 100% segura" },
               { icon: Zap, text: "Acesso imediato" },
-              { icon: FileText, text: "Material em PDF" },
+              
             ].map(({ icon: Icon, text }) => (
               <div key={text} className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Icon className="w-4 h-4" />
